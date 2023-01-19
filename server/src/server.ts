@@ -9,18 +9,27 @@ const prisma = new PrismaClient()
 app.register(cors)
 // app.register(appRoutes)
 
-app.get('/hello', async ()=> {
+
+// Buscar todas os registros na tabela "Habitos"
+app.get('/helloAll', async ()=> {
+  const habits = await prisma.habit.findMany()
+  return habits
+})
+
+// Buscar os registros na tabela "Habitos" que começam com "Beber"
+app.get('/helloOne', async ()=> {
   const habits = await prisma.habit.findMany(
-  // {
-  //   where: {
-  //     title: {
-  //       startsWith: 'Beber'
-  //     }
-  //   }
-  // }
+  {
+    where: {
+      title: {
+        startsWith: 'Beber'
+      }
+    }
+  }
   )
   return habits
 })
+
 
 
 app.listen({
