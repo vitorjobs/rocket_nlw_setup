@@ -17,7 +17,7 @@ app.get('/helloAll', async ()=> {
 })
 
 // Buscar os registros na tabela "Habitos" que começam com "Beber"
-app.get('/helloOne', async ()=> {
+app.get('/helloOne', async ()=> { 
   const habits = await prisma.habit.findMany(
   {
     where: {
