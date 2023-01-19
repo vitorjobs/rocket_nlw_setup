@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Meu Projeto Mobile novo!</Text>
+      <Text>Meu Projeto Mobile novo de novo!</Text>
       <StatusBar style="auto" />
     </View>
   );
