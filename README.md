@@ -33,6 +33,17 @@
   - Abre caixa de Dialogo para confirmar informações para controle de versão do banco de dados
   - Cria o arquivo de banco de dados, cria a pasta migrations com tabela e campos informados na estrutura da tabela
 - Visualizar banco de dados: `npx prisma studio` | Abre o banco de dados no navegador
+- Sempre Executar o npx prisma migrate dev para qualquer alteração na estrutura das tabelas do banco
+- Executar npx prisma generate para criar um arquivo com o diagram do banco de dados
+
+### SEED - Populador do banco de dados
+  - Executar scripts do banco de dos 
+    Conectar
+    Desconectar
+    Limpar Tabelas
+  Configurações estão no arquivo seeds.ts e no arquivo package.json
+    
+
 
 
 # React
